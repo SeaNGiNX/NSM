@@ -279,7 +279,7 @@ You have two options to instruct NSM on how to retrieve images:
         $ ./nginx-meshctl remove -y
 
 ### Before re-rolling your app, test that the sidecars are still in place for existing pods
-  $ kubectl get pods -n bookinfo -o=jsonpath='{range .items[*]}{"\n"}{.metadata.name}{":\t"}{range .spec.containers[*]}{.image}{", "}{end}{end}' | sort
+        $ kubectl get pods -n bookinfo -o=jsonpath='{range .items[*]}{"\n"}{.metadata.name}{":\t"}{range .spec.containers[*]}{.image}{", "}{end}{end}' | sort
         $ kubectl exec -it $(kubectl get pod -l app=ratings -n bookinfo -o jsonpath='{.items[0].metadata.name}') -n bookinfo -c ratings -- curl -I productpage:9080/productpage
 
 *You will no longer see the mesh-inserted header: X-Mesh-Request-ID*
