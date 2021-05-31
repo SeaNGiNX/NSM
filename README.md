@@ -1,7 +1,6 @@
 # NSM
-NGINX Service Mesh walk through
 
-NGINX Service Mesh: Lesson 1
+## NGINX Service Mesh: Lesson 1
 
 ## System setup
 
