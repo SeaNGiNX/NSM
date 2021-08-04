@@ -196,9 +196,8 @@ You have two options to instruct NSM on how to retrieve images:
 
 *NSM ships with a default Grafana dashboard that's used when NSM installs Grafana as part of the control plane. If you are running a dedicated Grafana instance, example dashboards can be found at https://github.com/nginxinc/nginx-service-mesh/tree/main/examples/grafana*
 
-        $ kubectl port-forward -n nginx-mesh --address=0.0.0.0 svc/grafana 3000:3000 &
-        $ while true; do 
-        $./nginx-meshctl top pods -n bookinfo; sleep 1; done
+        $ kubectl port-forward -n nginx-mesh --address=0.0.0.0 svc/grafana 3000:3000&
+        $ while true; do ./nginx-meshctl top pods -n bookinfo; sleep 1; done
 
 - Call `https://<your_k8s_cli_image>:3000` to review the Grafana dashboard
 
